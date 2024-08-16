@@ -1,5 +1,6 @@
 package owu.com.ua.springbootrepitition2024.controllers;
 
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -19,7 +20,7 @@ public class CarController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/cars")
-    public Car createCar(@RequestBody Car car) {
+    public Car createCar(@RequestBody @Valid Car car) {
         return carDao.save(car);
     }
 
