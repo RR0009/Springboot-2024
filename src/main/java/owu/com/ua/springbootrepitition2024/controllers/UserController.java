@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 import owu.com.ua.springbootrepitition2024.dao.UserDao;
 import owu.com.ua.springbootrepitition2024.models.User;
 import owu.com.ua.springbootrepitition2024.models.userdto.UserDto;
-import owu.com.ua.springbootrepitition2024.models.views.Views;
 import owu.com.ua.springbootrepitition2024.services.UserService;
 
 import java.util.Collection;

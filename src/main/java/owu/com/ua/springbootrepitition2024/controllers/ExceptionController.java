@@ -11,8 +11,11 @@ public class ExceptionController {
 
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
+
     public ResponseEntity<String> myExceptionHandler(MethodArgumentNotValidException e){
+
         String message = e.getFieldError().getDefaultMessage();
+
         return new ResponseEntity<>(message, HttpStatusCode.valueOf(500));
 
 

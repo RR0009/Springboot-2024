@@ -1,6 +1,5 @@
 package owu.com.ua.springbootrepitition2024.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonView;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -23,7 +22,7 @@ public class User {
     @NotBlank(message = "name is strictly required,babe!")
     @Size(min =3,message = "name must be at least 3 chars!")
     @Size(max =255,message = "name is too long honey!")
-    @JsonView({Views.Level1.class, Views.noLevel.class})
+    @JsonView({Views.Level1.class, Views.NoLevel.class})
     private String name;
     @JsonView(Views.Level1.class)
     private int age;
